@@ -2,6 +2,9 @@
 
 <div class="row">
     <div class="col-md-8">
+        <%= link_to "Add Application", new_registered_application_path, class: 'btn btn-success' %>
+    </div>
+    <div class="col-md-8">
         <% @registered_applications.each do |application| %>
             <div class="media">
                 <div class="media-body">
@@ -11,8 +14,5 @@
                 </div>
             </div>
         <% end %>
-    </div>
-    <div class="col-md-4">
-        <%= link_to "Add Application", new_registered_application_path, class: 'btn btn-success' %>
     </div>
 </div>
