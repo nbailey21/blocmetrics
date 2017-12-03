@@ -17,6 +17,11 @@ applications = RegisteredApplication.all
   )
 end
 
+RegisteredApplication.create!(
+  name: Faker::Team.mascot,
+  url: 'https://www.theringer.com/'
+  )
+
 puts "Seed finished"
 puts "#{RegisteredApplication.count} applications created"
 puts "#{Event.count} events created"
