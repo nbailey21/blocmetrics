@@ -6,16 +6,14 @@
         <h2>Events</h2>
     </div>
     <div class="col-md-8">
-        <% @events.each do |name, event| %>
-            <div class="media">
-                <div class="media-body">
-                    <h5 class="media-heading">
-                        <%= name %>
-                        <%= event.count %>
-                    </h5>
-                </div>
+        <div class="media">
+            <div class="media-body">
+                <h5 class="media-heading">
+                    <%= pie_chart @registered_application.events.group(:name).count %>
+                    <%= line_chart @registered_application.events.group_by_day(:created_at).count %>
+                </h5>
             </div>
-        <% end %>
+        </div>
     </div>
 </div>
 
